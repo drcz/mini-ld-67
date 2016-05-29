@@ -1,5 +1,10 @@
-/// fast'n'dirty heheszki.
-/// 120x96 -> 480 x 384 ?
+/// -- PUSHILLADE --
+/// an 8 hour fast js remix of the_pchanina
+/// (cf https://github.com/drcz/dercz9000)
+/// 2016.05.29, Alicante, drcz@tlen.pl
+/// prepared for mini Ludum Dare 67
+///////////////////////////////////////////////////////////
+
 
 /// global shit
 var GAME_STATE = 'TITLE';
@@ -423,7 +428,32 @@ window.addEventListener('keydown',
 			},
 			false);
 
-/// TODO: mouse click as well??
+/// ... try mouse click/tap as well
+var min_index = function(arr) {
+    var i=0;
+    for(var j=1;j<arr.length;j++) {
+	if(arr[j]<arr[i]) i=j;
+    }
+    return i;
+};
+
+document.onmousedown = function(e) {
+    if(e.offsetX>0 && e.offsetX<480 && e.offsetY>0 && e.offsetY<384) {
+	var d_left = e.offsetX;
+	var d_right = 480-e.offsetX;
+	var d_up = e.offsetY;
+	var d_down = 384-e.offsetY;
+	var dir_arr = [d_left,d_right,d_up,d_down];
+	var dir = min_index(dir_arr);
+	reset_joystick();
+	switch(dir) {
+	case 0: the_joystick.dx=-1; break;
+	case 1: the_joystick.dx=1; break;
+	case 2: the_joystick.dy=-1; break;
+	case 3: the_joystick.dy=1; break;
+	}
+    }
+};
 
 
 /// "config"

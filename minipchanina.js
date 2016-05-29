@@ -2,7 +2,7 @@
 /// 120x96 -> 480 x 384 ?
 
 /// global shit
-var GAME_STATE = 'FADE_IN';
+var GAME_STATE = 'TITLE';
 var THE_WORLD = {};
 var COURTAIN = 0;
 var MAX_COURTAIN = 13;
@@ -11,6 +11,7 @@ var NIDERITE_LEFT = 0;
 var LEVEL = 0;
 
 var MSG = {'text':'','expires':0};
+var FONT_COLOR = '#00ff00'
 
 /// the world copy'n'paste from our brave ego-block "engine":
 var mk_world = function(level) { /// TODO sure?
@@ -714,7 +715,7 @@ var Sprites = {
     ]),
 
     /// plus our "fonts":
-'A' : mk_sprite('#ffffff', [
+'A' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111110",
 "11000110",
@@ -724,37 +725,37 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'B' : mk_sprite('#ffffff', [
-"00000000",
-"11111100",
-"11001100",
-"11001100",
-"11111110",
-"11000110",
-"11000110",
-"11111110",
-]),
-'C' : mk_sprite('#ffffff', [
-"00000000",
-"11111100",
-"11000000",
-"11000000",
-"11000000",
-"11000000",
-"11000000",
-"11111110",
-]),
-'D' : mk_sprite('#ffffff', [
+'B' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111100",
 "11001100",
 "11001100",
+"11111110",
+"11000110",
+"11000110",
+"11111110",
+]),
+'C' : mk_sprite(FONT_COLOR, [
+"00000000",
+"11111100",
+"11000000",
+"11000000",
+"11000000",
+"11000000",
+"11000000",
+"11111110",
+]),
+'D' : mk_sprite(FONT_COLOR, [
+"00000000",
+"11111100",
+"11001100",
+"11001100",
 "11000110",
 "11000110",
 "11000110",
 "11111110",
 ]),
-'E' : mk_sprite('#ffffff', [
+'E' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111100",
 "11000000",
@@ -764,7 +765,7 @@ var Sprites = {
 "11000000",
 "11111110",
 ]),
-'F' : mk_sprite('#ffffff', [
+'F' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111110",
 "11000000",
@@ -774,7 +775,7 @@ var Sprites = {
 "11000000",
 "11000000",
 ]),
-'G' : mk_sprite('#ffffff', [
+'G' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111100",
 "11000000",
@@ -784,7 +785,7 @@ var Sprites = {
 "11000110",
 "11111110",
 ]),
-'H' : mk_sprite('#ffffff', [
+'H' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -794,7 +795,7 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'I' : mk_sprite('#ffffff', [
+'I' : mk_sprite(FONT_COLOR, [
 "00000000",
 "00110000",
 "00110000",
@@ -804,7 +805,7 @@ var Sprites = {
 "00110000",
 "00110000",
 ]),
-'J' : mk_sprite('#ffffff', [
+'J' : mk_sprite(FONT_COLOR, [
 "00000000",
 "00000110",
 "00000110",
@@ -814,7 +815,7 @@ var Sprites = {
 "00100110",
 "00111110",
 ]),
-'K' : mk_sprite('#ffffff', [
+'K' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11001100",
 "11001100",
@@ -824,7 +825,7 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'L' : mk_sprite('#ffffff', [
+'L' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000000",
 "11000000",
@@ -834,7 +835,7 @@ var Sprites = {
 "11000000",
 "11111110",
 ]),
-'M' : mk_sprite('#ffffff', [
+'M' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -844,7 +845,7 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'N' : mk_sprite('#ffffff', [
+'N' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -854,7 +855,7 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'O' : mk_sprite('#ffffff', [
+'O' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111110",
 "11000110",
@@ -864,7 +865,7 @@ var Sprites = {
 "11000110",
 "11111110",
 ]),
-'P' : mk_sprite('#ffffff', [
+'P' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111100",
 "11000110",
@@ -874,7 +875,7 @@ var Sprites = {
 "11000000",
 "11000000",
 ]),
-'Q' : mk_sprite('#ffffff', [
+'Q' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111110",
 "11000110",
@@ -884,7 +885,7 @@ var Sprites = {
 "11011110",
 "11111110",
 ]),
-'R' : mk_sprite('#ffffff', [
+'R' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111100",
 "11000110",
@@ -894,7 +895,7 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'S' : mk_sprite('#ffffff', [
+'S' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111100",
 "11000000",
@@ -904,7 +905,7 @@ var Sprites = {
 "11000110",
 "11111110",
 ]),
-'T' : mk_sprite('#ffffff', [
+'T' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111110",
 "00110000",
@@ -914,7 +915,7 @@ var Sprites = {
 "00110000",
 "00110000",
 ]),
-'U' : mk_sprite('#ffffff', [
+'U' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -924,7 +925,7 @@ var Sprites = {
 "11000110",
 "11111110",
 ]),
-'V' : mk_sprite('#ffffff', [
+'V' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -934,7 +935,7 @@ var Sprites = {
 "01101100",
 "00111000",
 ]),
-'W' : mk_sprite('#ffffff', [
+'W' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -944,7 +945,7 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'X' : mk_sprite('#ffffff', [
+'X' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -954,7 +955,7 @@ var Sprites = {
 "11000110",
 "11000110",
 ]),
-'Y' : mk_sprite('#ffffff', [
+'Y' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11000110",
 "11000110",
@@ -964,7 +965,7 @@ var Sprites = {
 "00110000",
 "00110000",
 ]),
-'Z' : mk_sprite('#ffffff', [
+'Z' : mk_sprite(FONT_COLOR, [
 "00000000",
 "11111100",
 "00001100",
@@ -1074,14 +1075,33 @@ var write_centered_line = function(txt,y) {
     write_line(txt,mx*tile_w,y);
 };
 
+/// "sounds" ;)
+var load_sound = function(url,max) {
+    var smpls = [];
+    for(var i=0;i<max;i++) {
+        smpls.push(new Audio(url));
+    }
+    return {"samples":smpls,"index":0,"max":max};
+};
 
+var Sounds = {
+    'low_beep': load_sound('beep2.ogg',3),
+    'high_beep': load_sound('beep.ogg',3)
+};
+
+var PLAY=function(type,vol) {
+    var s = Sounds[type];
+    s.index = ++s.index%s.max;
+    snd = s.samples[s.index];
+    snd.volume = vol;
+    snd.play();
+};
 
 
 /// "MAIN"... ////////////////////////////////////////////////////
 var kanwa=document.getElementById("ekraniszcze");
 var kontekst=kanwa.getContext("2d");
-
-THE_WORLD = init_level(0);
+var saundtrak=document.getElementById("soundtrack");
 
 var short_flash = function() {
     kontekst.fillStyle="#ffffff";
@@ -1100,36 +1120,47 @@ var main_loop = function() {
 		GAME_STATE='FADEOUT_DEATH';
 		MSG.text='YOU DIE';
 		MSG.expires=10;
+		PLAY('low_beep',1.0);
 		break;
 
 	    case 'ANIHILLATE':
 		NIDERITE_LEFT-=2;
 		//short_flash();
-		MSG.text='WELL DONE';
-		MSG.expires=5;
+		switch(rand(1,5)) {
+		case 1:MSG.text='WELL DONE';break;
+		case 2:MSG.text='NICE';break;
+		case 3:MSG.text='SWEET';break;
+		case 4:MSG.text='COOL';break;
+		case 5:MSG.text='GOOD';break;
+		}
+		MSG.expires=3;
 		if(NIDERITE_LEFT<=0) {
 		    GAME_STATE='FADEOUT_LEVELUP';
 		    MSG.text='LEVEL COMPLETE';
 		    MSG.expires=10;
 		}
+		PLAY('high_beep',1.0);
 		break;
 
 	    case 'PICKUP':
 		MSG.text='GOT A KEY';
-		MSG.expires=5;
+		MSG.expires=4;
+		PLAY('high_beep',1.0);
 		break;
 
 	    case 'OPEN':
 		MSG.text='DOOR UNLOCKS';
-		MSG.expires=5;
+		MSG.expires=4;
+		PLAY('high_beep',1.0);
 		break;
 
 	    case 'NO KEY':
 		MSG.text='YOU NEED A KEY';
 		MSG.expires=5;
+		PLAY('low_beep',1.0);
 		break;
 
-		/// todo some sounds??
+		/// todo more sounds??
 
 	    }
 	}
@@ -1138,14 +1169,15 @@ var main_loop = function() {
 	break;
 
     case 'FADE_IN':
-	display_board(THE_WORLD, false,COURTAIN);	
+	display_board(THE_WORLD, false,COURTAIN,MSG);
 	if(COURTAIN++ > MAX_COURTAIN) GAME_STATE='PLAY';	
+	reset_joystick();
 	break;
 
     case 'FADEOUT_DEATH':
-	display_board(THE_WORLD, true,COURTAIN);	
+	display_board(THE_WORLD, true,COURTAIN,MSG);	
 	if(COURTAIN-- <= 0) {
-	    if(LIVES>0) {
+	    if(--LIVES>0) {
 		GAME_STATE='FADE_IN';
 		MSG.text='GET READY';
 		MSG.expires=9;
@@ -1156,23 +1188,71 @@ var main_loop = function() {
 		MSG.expires=23;
 	    }
 	}
+	reset_joystick();
 	break;
 
     case 'FADEOUT_LEVELUP':
-	display_board(THE_WORLD, false,COURTAIN);	
-	if(COURTAIN-- <= 0) {
-	    GAME_STATE='FADE_IN';
-	    MSG.text='GET READY';
-	    MSG.expires=9;
-	    THE_WORLD = init_level(++LEVEL);
+	display_board(THE_WORLD, false,COURTAIN,MSG);	
+	if(COURTAIN-- <= 0) {	    
+	    if(++LEVEL >= Levels.length) {
+		GAME_STATE = 'VICTOLY';
+	    } else {
+		GAME_STATE='FADE_IN';
+		MSG.text='GET READY';
+		MSG.expires=9;
+		THE_WORLD = init_level(LEVEL);
+	    }
 	}
+	reset_joystick();
 	break;
 
     case 'TITLE':
-	///todo
+	saundtrak.volume=0.99;
+	THE_WORLD = mk_world([{'type':'ACTOR','x':13,'y':13,'dx':0,'dy':1,'keys':0}]);
+	LIVES=0;
+	COURTAIN=0;
+    	MSG.text='PUSHILLADE';
+	MSG.expires=23;
+	display_board(THE_WORLD, false,COURTAIN,MSG);	
+	write_centered_line('any move',(viewport_dh+4)*tile_h);	
+	write_centered_line('to start',(viewport_dh+5)*tile_h);
+	
+	if(the_joystick.dx!=0 || the_joystick.dy!=0) {
+	    saundtrak.volume=0.66;
+	    MSG.text='GET READY';
+	    MSG.expires=9;
+	    LEVEL=0;
+	    LIVES=3;
+	    THE_WORLD=init_level(LEVEL);
+	    GAME_STATE='FADE_IN';
+	    COURTAIN=0;
+	    reset_joystick();
+	}
 	break;
+
     case 'GAMEOVER':
-	///todo
+	THE_WORLD = mk_world([{'type':'ACTOR','x':13,'y':13,'dx':0,'dy':1,'keys':0}]);
+	LIVES=0;
+	COURTAIN=MAX_COURTAIN;
+    	MSG.text='GAME OVER';
+	MSG.expires=23;
+	display_board(THE_WORLD, true,COURTAIN,MSG);	
+	write_centered_line('any move',(viewport_dh+4)*tile_h);	
+	if(the_joystick.dx!=0 || the_joystick.dy!=0) {
+	    GAME_STATE = 'TITLE';
+	    reset_joystick();
+	}
+	break;
+
+    case 'VICTOLY':
+	THE_WORLD = mk_world([{'type':'ACTOR','x':13,'y':13,'dx':0,'dy':1,'keys':0}]);
+	LIVES=0;
+	COURTAIN=MAX_COURTAIN;
+    	MSG.text='VICTOLY';
+	MSG.expires=23;
+	the_joystick.dy=1;
+	display_board(THE_WORLD, false,COURTAIN,MSG);
+	break;
 
     }
 };

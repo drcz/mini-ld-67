@@ -9,7 +9,7 @@ Eliminate all the niderite crystals by pushing one onto another.
 Avoid ants, open doors with keys, oh my.
 You can even try to kill ants with niderite, but it's not easy.
 
-Controls: arrow keys, or WSAD, or by tapping/clicking near the border (even more annoying than the tune!).
+Controls: arrow keys, or WSAD, or by tapping/clicking near the border (even more annoying than the tune and tapping does not work on ios or maybe at all).
 
 Gfx from the_pchanina, excluding fonts made today [everything drawn in emacs].
 

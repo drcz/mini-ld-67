@@ -428,7 +428,7 @@ window.addEventListener('keydown',
 			},
 			false);
 
-/// ... try mouse click/tap as well
+/// ... try mouse click/tap as well?
 var min_index = function(arr) {
     var i=0;
     for(var j=1;j<arr.length;j++) {
@@ -439,6 +439,8 @@ var min_index = function(arr) {
 
 var tykniecie = function(e) {
     if(e.offsetX>0 && e.offsetX<480 && e.offsetY>0 && e.offsetY<384) {
+        e.preventDefault();
+	alert("tyk");
 	var d_left = e.offsetX;
 	var d_right = 480-e.offsetX;
 	var d_up = e.offsetY;

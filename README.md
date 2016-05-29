@@ -11,6 +11,8 @@ You can even try to kill ants with niderite, but it's not easy.
 
 Controls: arrow keys, or WSAD, or by tapping/clicking near the border (even more annoying than the tune and tapping does not work on ios or maybe at all).
 
+Play online here http://drcz.github.io/mini-ld-67/
+
 Gfx from the_pchanina, excluding fonts made today [everything drawn in emacs].
 
 Implementation based on "ego blocks engine" of https://github.com/drcz/ludum-dare-35/tree/master/3Ro2CSiaMoT

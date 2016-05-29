@@ -437,7 +437,7 @@ var min_index = function(arr) {
     return i;
 };
 
-document.onmousedown = function(e) {
+var tykniecie = function(e) {
     if(e.offsetX>0 && e.offsetX<480 && e.offsetY>0 && e.offsetY<384) {
 	var d_left = e.offsetX;
 	var d_right = 480-e.offsetX;
@@ -455,6 +455,8 @@ document.onmousedown = function(e) {
     }
 };
 
+document.ontouchend = tykniecie;
+document.onmousedown = tykniecie;
 
 /// "config"
 var spr_w = 8;

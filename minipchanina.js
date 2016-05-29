@@ -438,7 +438,7 @@ var min_index = function(arr) {
 };
 
 var tykniecie = function(e) {
-    	alert("tyk");
+    alert(e.offsetX+'|'+e.offsetY);
     if(e.offsetX>0 && e.offsetX<480 && e.offsetY>0 && e.offsetY<384) {
         e.preventDefault();
 	var d_left = e.offsetX;

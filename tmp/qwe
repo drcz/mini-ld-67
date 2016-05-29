@@ -1,0 +1,15 @@
+#############################################
+
+qwe=`cat fonty`.split("\n");
+i=0;
+puts "";
+(0...26).each{|l|
+  puts "'#{qwe[i]}' : mk_sprite('#ffffff', [";
+  (0...8).each{|j|
+    i=i+1;
+    puts "\"#{qwe[i]}\","
+  }
+  i=i+1;
+  puts "]),";
+}
+
